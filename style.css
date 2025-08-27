@@ -1,0 +1,85 @@
+/* Animate emoji while sound is playing */
+.playing-emoji {
+    animation: emoji-pulse-twist 0.7s infinite;
+}
+
+@keyframes emoji-pulse-twist {
+    0%   { transform: scale(1) rotate(0deg); }
+    20%  { transform: scale(1.08) rotate(-12deg); }
+    50%  { transform: scale(1.18) rotate(12deg); }
+    80%  { transform: scale(1.08) rotate(-12deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+body {
+    background: #181818;
+    color: #fff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+html {
+    overflow-x: hidden;
+}
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #232323;
+    border-radius: 16px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.7);
+    padding: 32px 24px;
+}
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 32px;
+    letter-spacing: 2px;
+}
+.soundboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 20px;
+}
+.button {
+    background: #292929;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    color: #fff;
+    font-size: 2.2em;
+    padding: 24px 0;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    outline: none;
+    position: relative;
+}
+.button:hover, .button:focus {
+    background: #444;
+    transform: scale(1.08);
+}
+.button:active {
+    background: #111;
+}
+.button-label {
+    display: block;
+    font-size: 0.5em;
+    color: #bbb;
+    margin-top: 8px;
+    text-align: center;
+}
+@media (max-width: 500px) {
+    .container {
+        padding: 12px 4px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .soundboard {
+        gap: 10px;
+    }
+    .button {
+        font-size: 1.3em;
+        padding: 12px 0;
+    }
+}
