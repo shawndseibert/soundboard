@@ -1,1 +1,1 @@
-[GitHub Page](https://shawndseibert.github.io/soundboard/)
+[Soundboard](https://shawndseibert.github.io/soundboard/)
